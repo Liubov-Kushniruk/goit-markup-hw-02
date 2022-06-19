@@ -1,51 +1,62 @@
 :root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
-    --primary-white-color: #FFFFFF;
     --acent-color: #2196F3;
     --background-hero: #2F303A;
-    --primary-background: #E5E5E5;
+    --primary-background: #FFFFFF;
     --team-background: #F5F4FA;
     --footer-background: #2F303A;
     --btn-background: #EEEEEE;
+    --footer-link-alpha: gba(255, 255, 255, 0.6);
 }
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
-    color: var(--primary-text-color)
-
+    color: var(--primary-text-color);
+    letter-spacing: 0.03em;
+    background-color: var(--primary-background);
+    font-size: 16px;
 }
 
-.header {
-    background-color: var(--primary-white-color);
+.list {
+        list-style-type: none;
+    }
+.link {
+    text-decoration: none;
 }
 .logo {
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
+    line-height: 1.19;
     color: var(--title-text-color);
 }
+
 .footer .logo {
-    color: var(--primary-white-color);
+    color: var(--primary-background);
 }
 .logo>span {
     color: var(--acent-color);
 }
 .site-nav .link,
-.contact .link {
+.contacts .link {
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.14;
     letter-spacing: 0.02em;
+}
+.site-nav .link {
     color: var(--title-text-color);
+}
+.site-nav .current {
+    color: var(--acent-color);
+}
+.contacts .link {
+    color: var(--primary-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
-.contact .link:hover,
-.contact .link:focus,
-.logo:hover,
-.logo:focus {
+.contacts .link:hover,
+.contacts .link:focus {
     color: var(--acent-color);
 }
 
@@ -56,13 +67,16 @@ body {
 .hero-title {
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.4;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--primary-white-color);
+    color: var(--primary-background);
 }
 .hero .btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--primary-background);
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -70,34 +84,36 @@ body {
 }
 
 /*Наши преимущества */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .advantages .title {
-    font-weight: 700;
     font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
+    line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
 }
 .advantages .text {
     font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+    line-height: 1.71;
 }
 
 
 /* Чем мы занимаемся*/
-.advantages,
-.about
- {
-    background-color: var(--primary-background);
-}
-.about .title,
-.team .title {
-    font-weight: 700;
+.title {
     font-size: 36px;
-    line-height: 1.2;
+    line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
 /* our team*/
@@ -107,27 +123,28 @@ body {
 
 .team-list .name {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.18;
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
 .team-list .job {
-    font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.18;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .footer {
     background-color: var(--footer-background);
 }
 .footer .link {
+    font-style: normal;
     font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: var(--primary-white-color);
+    line-height: 1.71;
+}
+.footer .map {
+    color: var(--primary-background);
+}
+.footer .contact {
+    color: var(--footer-link-alpha);
 }
 .footer .link:hover,
 .footer .link:focus {
@@ -135,35 +152,33 @@ body {
 }
 
 /* Portfolio*/
-.examples {
-    background-color: var(--primary-background);
-}
  .list .btn {
     cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
     background-color: var(--btn-background);
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.62;
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
+ }
+ .btn.active {
+    background-color: var(--primary-background);
  }
  .list .btn:hover,
  .list .btn:focus {
     background-color: var(--acent-color);
     color: var(--primary-white-color);
  }
- .list-work .title {
-    font-weight: 700;
+ .list-projects .title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
  }
- .list-work .text {
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
+ .list-projects .text {
+    line-height: 1.88;
+    color: var(--primary-text-color);
  }
 
 
