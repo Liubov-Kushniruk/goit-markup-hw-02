@@ -151,6 +151,10 @@ body {
 .footer .contact {
     color: var(--footer-link-alpha);
 }
+.footer .contact:hover,
+.footer .contact:focus {
+    color: var(--acent-color);
+}
 
 /* Portfolio*/
  .list .btn {
